@@ -1,27 +1,16 @@
 
-CREATE TABLE IF NOT EXISTS `agents` (
-  `AGENT_CODE` varchar(6) NOT NULL DEFAULT '',
-  `AGENT_NAME` varchar(40) DEFAULT NULL,
-  `WORKING_AREA` varchar(35) DEFAULT NULL,
-  `COMMISSION` decimal(10,2) DEFAULT NULL,
+CREATE TABLE `workers` (
+  `WORKER_ID` varchar(6) NOT NULL DEFAULT '',
+  `WORKER_NAME` varchar(40) DEFAULT NULL,
+  `PLACE` varchar(35) DEFAULT NULL,
+  `SALARY` decimal(10,2) DEFAULT NULL,
   `PHONE_NO` varchar(15) DEFAULT NULL,
-  `COUNTRY` varchar(25) DEFAULT NULL,
   `BRANCH_ID` varchar(6) NOT NULL DEFAULT '',
-  PRIMARY KEY (`AGENT_CODE`),
+  PRIMARY KEY (`WORKER_ID`),
   FOREIGN KEY (`BRANCH_ID`) REFERENCES branchID (`BRANCH_ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 
-INSERT INTO `agents` (`AGENT_CODE`, `AGENT_NAME`, `WORKING_AREA`, `COMMISSION`, `PHONE_NO`, `BRANCH_ID`, `COUNTRY`) VALUES
-('A007  ', 'Ramasundar                              ', 'Bangalore                          ', '0.15', '077-25814763   ', "1" ,'\r'),
-('A003  ', 'Alex                                    ', 'London                             ', '0.13', '075-12458969   ', "3" ,'\r'),
-('A008  ', 'Alford                                  ', 'New York                           ', '0.12', '044-25874365   ', "2" ,'\r'),
-('A011  ', 'Ravi Kumar                              ', 'Bangalore                          ', '0.15', '077-45625874   ', "5" ,'\r'),
-('A010  ', 'Santakumar                              ', 'Chennai                            ', '0.14', '007-22388644   ', "4" ,'\r'),
-('A012  ', 'Lucida                                  ', 'San Jose                           ', '0.12', '044-52981425   ', "1" ,'\r'),
-('A005  ', 'Anderson                                ', 'Brisban                            ', '0.13', '045-21447739   ', "4" ,'\r'),
-('A001  ', 'Subbarao                                ', 'Bangalore                          ', '0.14', '077-12346674   ', "5" ,'\r'),
-('A002  ', 'Mukesh                                  ', 'Mumbai                             ', '0.11', '029-12358964   ', "5" ,'\r'),
-('A006  ', 'McDen                                   ', 'London                             ', '0.15', '078-22255588   ', "2" ,'\r'),
-('A004  ', 'Ivan                                    ', 'Torento                            ', '0.15', '008-22544166   ', "3" ,'\r'),
-('A009  ', 'Benjamin                                ', 'Hampshair                          ', '0.11', '008-22536178   ', "1" ,'\r');
+INSERT INTO `agents` (`WORKER_ID`, `WORKER_NAME`, `PLACE`, `SALARY`, `PHONE_NO`, `BRANCH_ID`) VALUES
+("AGENT_CODE", "AGENT_NAME", "WORKING_AREA", "SALARY", "PHONE_NO", "BRANCH_ID"),
+("AGENT_CODE", "AGENT_NAME", "WORKING_AREA", "SALARY", "PHONE_NO", "BRANCH_ID");
